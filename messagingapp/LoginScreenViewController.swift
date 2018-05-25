@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func LoginPressed(_ sender: Any) {
+        let messageListScreen = self.storyboard?.instantiateViewController(withIdentifier: "messageList")
+        self.present(messageListScreen!, animated: true, completion: nil)
+    }
+    
 }
 
